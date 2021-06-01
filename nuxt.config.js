@@ -1,33 +1,34 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "hemumeijia",
+    title: 'hemumeijia',
     htmlAttrs: {
-      lang: "zh-CN"
+      lang: 'zh-CN'
     },
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "禾木美家" },
-      { name: "referrer", content: "no-referrer" } // 解决 网络图片 img 403问题
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '禾木美家' },
+      { name: 'referrer', content: 'no-referrer' } // 解决 网络图片 img 403问题
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-    script: [{ src: "/rem.js", type: "text/javascript", charset: "utf-8" }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [{ src: '/rem.js', type: 'text/javascript', charset: 'utf-8' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    "element-ui/lib/theme-chalk/reset.css",
+    'element-ui/lib/theme-chalk/reset.css',
     // 'element-ui/lib/theme-chalk/index.css',
-    "@/assets/css/reset.css",
-    "@/assets/css/index.css"
+    '@/assets/css/reset.css',
+    '@/assets/css/index.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    "@/plugins/element-ui/element-ui",
-    "@/plugins/filter",
-    "@/plugins/i18n"
+    '@/plugins/element-ui/element-ui',
+    '@/plugins/filter',
+    '@/plugins/i18n',
+    'animate.css/animate.css'
     // '@/plugins/tongji'
   ],
 
@@ -38,7 +39,7 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/axios"],
+  modules: ['@nuxtjs/axios'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -47,10 +48,10 @@ export default {
     babel: {
       plugins: [
         [
-          "component",
+          'component',
           {
-            libraryName: "element-ui",
-            styleLibraryName: "theme-chalk"
+            libraryName: 'element-ui',
+            styleLibraryName: 'theme-chalk'
           }
         ]
       ]
@@ -58,45 +59,45 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    vendor: ["vue-i18n"], // webpack vue-i18n.bundle.js
+    vendor: ['vue-i18n'], // webpack vue-i18n.bundle.js
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
-          enforce: "pre",
+          enforce: 'pre',
           test: /\.(js|vue)$/,
           // loader: 'eslint-loader',
           exclude: /(node_modules)/
-        });
+        })
       }
     }
   },
   router: {
-    mode: "history",
+    mode: 'history',
     scrollBehavior(to, from, savedPosition) {
       if (savedPosition) {
-        return savedPosition;
+        return savedPosition
       }
-      return { x: 0, y: 0 };
+      return { x: 0, y: 0 }
     },
-    middleware: "i18n"
+    middleware: 'i18n'
   },
   server: {
     port: 5000
   },
   axios: {
     proxy: true,
-    baseURL: "http://localhost:8093/"
+    baseURL: 'http://localhost:8093/'
   },
   proxy: {
-    "/business/": {
-      target: "http://127.0.0.1:8093/",
+    '/business/': {
+      target: 'http://127.0.0.1:8093/',
       pathRewrite: {
-        "^/business/": ""
+        '^/business/': ''
       }
     },
-    "/public/": {
-      target: "http://127.0.0.1:8999/"
+    '/public/': {
+      target: 'http://127.0.0.1:8999/'
     }
   }
-};
+}
