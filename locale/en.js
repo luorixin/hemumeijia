@@ -157,8 +157,7 @@ export default {
     tip2: 'previous page',
     tip3: ' or go to the ',
     tip4: 'home page',
-    tip5:
-      'To report this issue or for additional support, please contact us at ',
+    tip5: 'To report this issue or for additional support, please contact us at ',
     tip6: 'Home'
   }
 }
