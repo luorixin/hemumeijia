@@ -2,6 +2,7 @@
   <div class="m-header">
     <div class="hleft">
       <logo></logo>
+      <navbar />
     </div>
     <div class="hright">
       <tools></tools>
@@ -13,10 +14,12 @@
 import Logo from '../../Logo.vue'
 import navBar from './navbar.vue'
 import tools from './tools.vue'
+import navbar from './navbar.vue'
 export default {
   components: {
     Logo,
-    tools
+    tools,
+    navbar
   }
 }
 </script>

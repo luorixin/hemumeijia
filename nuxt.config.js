@@ -17,10 +17,11 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/css/index.css',
     'element-ui/lib/theme-chalk/reset.css',
     // 'element-ui/lib/theme-chalk/index.css',
     '@/assets/css/reset.css',
-    '@/assets/css/index.css'
+    '@/assets/css/animate.min.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -28,8 +29,7 @@ export default {
     '@/plugins/element-ui/element-ui',
     '@/plugins/filter',
     '@/plugins/i18n',
-    'animate.css/animate.css'
-    // '@/plugins/tongji'
+    { src: '@/plugins/wow', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

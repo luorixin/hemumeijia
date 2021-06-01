@@ -1,62 +1,123 @@
 <template>
-  <div>
-    <Nuxt />
-  </div>
+  <el-container ref="layout" class="layout-default">
+    <el-header
+      class="myheader"
+      height="1.066667rem"
+      ref="header"
+      :class="{ hideHead: $store.state.hideHead, scrollCls: isScroll }"
+    >
+      <my-header />
+    </el-header>
+    <el-main class="mymain">
+      <div class="main-content" :gutter="15">
+        <transition name="fade-transform" mode="out-in">
+          <nuxt />
+        </transition>
+      </div>
+    </el-main>
+    <el-footer class="myfooter" height="3.072rem">
+      <my-footer />
+    </el-footer>
+    <el-backtop target=".layout-default" :visibility-height="100"></el-backtop>
+  </el-container>
 </template>
 
-<style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+import MyHeader from '@/components/common/header/index.vue'
+import MyFooter from '@/components/common/footer/index.vue'
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+export default {
+  components: {
+    MyHeader,
+    MyFooter
+  },
+  data() {
+    return {
+      isScroll: false
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      const scroll = document.querySelector('.layout-default')
+      scroll.addEventListener('scroll', this.handleScroll)
+    })
+  },
+  destroyed() {
+    console.log('destroy')
+    const scroll = document.querySelector('.layout-default')
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  watch: {
+    $route: {
+      handler(val) {
+        if (process.client) {
+          this.$store.commit('SET_HIDEHEAD', false)
+          if (val.name === 'detailed-id') {
+            this.$store.commit('SET_HIDEHEAD', true)
+          } else {
+            if (document.querySelector('.layout-default')) {
+              document.querySelector('.layout-default').scrollTo(0, 0)
+            }
+          }
+        }
+      },
+      deep: true,
+      immediate: true
+    }
+  },
+  methods: {
+    handleScroll(e) {
+      const headerHeight = this.$refs.header.$el.offsetHeight
+      if (e.target.scrollTop > headerHeight) {
+        this.isScroll = true
+      } else {
+        this.isScroll = false
+      }
+    }
+  }
 }
+</script>
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+<style lang="scss" scoped>
+@import '@/assets/css/animation.scss';
+.layout-default {
+  height: 100vh;
+  width: 100%;
+  min-width: 10.922667rem /* 1024/93.75 */;
+  overflow: scroll;
+  * {
+    box-sizing: border-box;
+  }
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+/deep/ .el-icon-caret-top {
+  font-size: 0.213333rem /* 20/93.75 */;
 }
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.myheader {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 1.066667rem /* 100/93.75 */ !important;
+  z-index: 300;
+  transition: all 0.5s;
+  &.scrollCls {
+    // display: none;
+    background: #fff;
+    box-shadow: 0 0.021333rem 0.085333rem 0 rgba(21, 21, 21, 0.09);
+  }
 }
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.mymain {
+  padding: 0;
+  overflow: unset;
+}
+.myfooter {
+  position: relative;
+  width: 100%;
+  height: 3.072rem /* 288/93.75 */;
+  z-index: 3;
+  background: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

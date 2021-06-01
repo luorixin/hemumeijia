@@ -11,28 +11,57 @@
           </div>
         </div>
         <div class="head-carousel">
-          <el-image :src="headImgs.src"></el-image>
+          <el-carousel :interval="5000" arrow="always" height="4.309333rem">
+            <el-carousel-item
+              v-for="(item, index) in headImgs"
+              :key="'head_img_' + index"
+            >
+              <el-image :src="item.src"></el-image>
+            </el-carousel-item>
+          </el-carousel>
         </div>
       </div>
     </section>
     <section class="home-feature">
-      <div class="feature-title">Parllay企微管家 助您打通微信用户数据，构建营销自动化与和用户增长体系</div>
+      <div class="feature-title">
+        Parllay企微管家 助您打通微信用户数据，构建营销自动化与和用户增长体系
+      </div>
       <div class="feature-bg">
         <el-image class="feature-img" :src="featureImg.src"></el-image>
       </div>
     </section>
     <section class="home-detail">
       <div class="detail-tabs">
-        <span @mouseover="chaneTab(0)" class="tab" :class="{ active: activeTab === 0 }">高效获客</span>
+        <span
+          @mouseover="chaneTab(0)"
+          class="tab"
+          :class="{ active: activeTab === 0 }"
+          >高效获客</span
+        >
         <span class="tabs-divider"></span>
-        <span @mouseover="chaneTab(1)" class="tab" :class="{ active: activeTab === 1 }">销售转化</span>
+        <span
+          @mouseover="chaneTab(1)"
+          class="tab"
+          :class="{ active: activeTab === 1 }"
+          >销售转化</span
+        >
         <span class="tabs-divider"></span>
-        <span @mouseover="chaneTab(2)" class="tab" :class="{ active: activeTab === 2 }">社群运营</span>
+        <span
+          @mouseover="chaneTab(2)"
+          class="tab"
+          :class="{ active: activeTab === 2 }"
+          >社群运营</span
+        >
         <span class="tabs-divider"></span>
-        <span @mouseover="chaneTab(3)" class="tab" :class="{ active: activeTab === 3 }">企业风控</span>
+        <span
+          @mouseover="chaneTab(3)"
+          class="tab"
+          :class="{ active: activeTab === 3 }"
+          >企业风控</span
+        >
       </div>
       <div
-        class="detail-con"
+        class="detail-con wow animate__animated animate__fadeIn"
         v-for="(detail, index) in detailCon"
         :key="'detail_' + index"
         v-show="index === activeTab"
@@ -43,7 +72,11 @@
         </div>
         <div class="detail-content">
           <div class="content-inner">
-            <div class="inner-ul" v-for="(item, key) in detail['detail']" :key="'deatil_' + key">
+            <div
+              class="inner-ul"
+              v-for="(item, key) in detail['detail']"
+              :key="'deatil_' + key"
+            >
               <div class="inner-ul__title">{{ item.title }}</div>
               <div class="inner-ul__desc">{{ item.desc }}</div>
             </div>
@@ -64,9 +97,20 @@ export default {
   components: { freetry },
   data() {
     return {
-      headImgs: {
-        src: '/img/header-bg@2x.png'
-      },
+      headImgs: [
+        {
+          src: 'https://assets.weibanzhushou.com/web/we-work-webapp/website-landing-page_right-1-4.ad681e3fc1f0.png'
+        },
+        {
+          src: 'https://assets.weibanzhushou.com/web/we-work-webapp/website-landing-page_right-1-3.648979a32b8d.png'
+        },
+        {
+          src: 'https://assets.weibanzhushou.com/web/we-work-webapp/website-landing-page_right-1-4.ad681e3fc1f0.png'
+        },
+        {
+          src: 'https://assets.weibanzhushou.com/web/we-work-webapp/website-landing-page_right-1-1.150bc5376cbb.png'
+        }
+      ],
       featureImg: {
         src: '/img/Group15@2x.png'
       },
@@ -81,18 +125,15 @@ export default {
           detail: [
             {
               title: '批量加好友',
-              desc:
-                '为员工创建批量添加好友任务，备注、标签自动同步，实时反馈添加详情，可支持一次上传多个客户分配给多个员工'
+              desc: '为员工创建批量添加好友任务，备注、标签自动同步，实时反馈添加详情，可支持一次上传多个客户分配给多个员工'
             },
             {
               title: '智能码',
-              desc:
-                '广告投放、线下活动、内容营销…不同渠道匹配不同智能码，以此追踪获客轨迹，改善营销效果，并分配指派不同员工，自动发送欢迎语、打标签'
+              desc: '广告投放、线下活动、内容营销…不同渠道匹配不同智能码，以此追踪获客轨迹，改善营销效果，并分配指派不同员工，自动发送欢迎语、打标签'
             },
             {
               title: '一客一码',
-              desc:
-                '为每个客户生成专属二维码名片，清晰反馈老客户带新客户情况，企业可追溯客源'
+              desc: '为每个客户生成专属二维码名片，清晰反馈老客户带新客户情况，企业可追溯客源'
             }
           ]
         },
@@ -102,18 +143,15 @@ export default {
           detail: [
             {
               title: '客户动态',
-              desc:
-                '客户的行为路径实时同步，帮助分析客户意向，关键行为提醒，帮助销售转化促单'
+              desc: '客户的行为路径实时同步，帮助分析客户意向，关键行为提醒，帮助销售转化促单'
             },
             {
               title: '素材分享',
-              desc:
-                '企业配置素材库，销售添加智能码，记录客户分享链路，生成客户关系网，分析客户决策者，帮助销售了解客户关系'
+              desc: '企业配置素材库，销售添加智能码，记录客户分享链路，生成客户关系网，分析客户决策者，帮助销售了解客户关系'
             },
             {
               title: '历史朋友圈',
-              desc:
-                '可为员工添加历史朋友圈，销售也可自己添加朋友圈，丰富销售个人对外展示资料，供客户全方位了解企业及员工详情'
+              desc: '可为员工添加历史朋友圈，销售也可自己添加朋友圈，丰富销售个人对外展示资料，供客户全方位了解企业及员工详情'
             }
           ]
         },
@@ -123,18 +161,15 @@ export default {
           detail: [
             {
               title: '群SOP',
-              desc:
-                '制定推送规则，系统自动提醒群主执行规则发送消息，有效触达客户，制定客户关怀流程'
+              desc: '制定推送规则，系统自动提醒群主执行规则发送消息，有效触达客户，制定客户关怀流程'
             },
             {
               title: '自动拉群',
-              desc:
-                '创建社群智能码，先将客户添加到员工账号中，再通过欢迎语邀请客户加入群聊，对进群的客户自动打标签'
+              desc: '创建社群智能码，先将客户添加到员工账号中，再通过欢迎语邀请客户加入群聊，对进群的客户自动打标签'
             },
             {
               title: '标签建群',
-              desc:
-                '根据客户标签建群，企业可以有针对性地给不同特征的客户群制定不同的的社群运营方案，社群运营起来也会更高效，更利于群转化'
+              desc: '根据客户标签建群，企业可以有针对性地给不同特征的客户群制定不同的的社群运营方案，社群运营起来也会更高效，更利于群转化'
             }
           ]
         },
@@ -144,18 +179,15 @@ export default {
           detail: [
             {
               title: '聊天违规提醒',
-              desc:
-                '合规化存档企业微信聊天内容，便于会话质检和内部管理运营，避免客服、运营人员会话不规范'
+              desc: '合规化存档企业微信聊天内容，便于会话质检和内部管理运营，避免客服、运营人员会话不规范'
             },
             {
               title: '客户流失提醒',
-              desc:
-                '客户流失提醒、员工删除客户预警，企业内部可控管理，方便采取挽回沟通措施'
+              desc: '客户流失提醒、员工删除客户预警，企业内部可控管理，方便采取挽回沟通措施'
             },
             {
               title: '离职继承',
-              desc:
-                '企业可将离职员工客户分配给其他员工，减少企业客户资源流失，也减少服务中断对客户服务体验的影响'
+              desc: '企业可将离职员工客户分配给其他员工，减少企业客户资源流失，也减少服务中断对客户服务体验的影响'
             }
           ]
         }
@@ -181,7 +213,7 @@ export default {
     left: 0;
     width: 100%;
     height: 6.186667rem /* 580/93.75 */;
-    background: #212121;
+    background: lightblue;
   }
   .home-screen {
     position: relative;

@@ -2,6 +2,8 @@ import Vue from 'vue'
 import {
   Message,
   Dialog,
+  Carousel,
+  CarouselItem,
   Menu,
   Submenu,
   MenuItem,
@@ -52,6 +54,8 @@ Vue.use(Link, { locale })
 Vue.use(Divider, { locale })
 Vue.use(Image, { locale })
 Vue.use(Backtop, { locale })
+Vue.use(Carousel, { locale })
+Vue.use(CarouselItem, { locale })
 
 Vue.use(Loading.directive)
 
