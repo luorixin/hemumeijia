@@ -213,7 +213,7 @@ export default {
     left: 0;
     width: 100%;
     height: 6.186667rem /* 580/93.75 */;
-    background: lightblue;
+    background: linear-gradient(70deg,rgba(245,244,254,.9),#f9fcff 44%,#eef5ff);
   }
   .home-screen {
     position: relative;
@@ -228,7 +228,7 @@ export default {
         .text-title {
           font-family: PingFangSC-Semibold;
           font-size: 0.64rem /* 60/93.75 */;
-          color: #ffffff;
+          color: #333;
           letter-spacing: 0;
           height: 0.896rem /* 84/93.75 */;
           line-height: 0.896rem /* 84/93.75 */;
@@ -237,7 +237,7 @@ export default {
           margin-top: 0.096rem /* 9/93.75 */;
           font-family: PingFangSC-Regular;
           font-size: 0.192rem /* 18/93.75 */;
-          color: #ffffff;
+          color: #333;
           letter-spacing: 0;
           line-height: 0.309333rem /* 29/93.75 */;
         }
