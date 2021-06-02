@@ -2,7 +2,7 @@
   <el-container ref="layout" class="layout-default">
     <el-header
       class="myheader"
-      height="1.066667rem"
+      height=".64rem"
       ref="header"
       :class="{ hideHead: $store.state.hideHead, scrollCls: isScroll }"
     >
@@ -97,7 +97,7 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 1.066667rem /* 100/93.75 */ !important;
+  height: 0.64rem /* 60/93.75 */ !important;
   z-index: 300;
   transition: all 0.5s;
   &.scrollCls {

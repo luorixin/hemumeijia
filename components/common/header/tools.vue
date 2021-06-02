@@ -1,14 +1,11 @@
 <template>
   <div class="mytools">
-    <freetry type="primary">登陆</freetry>
+    <!-- <freetry type="primary">登陆</freetry> -->
   </div>
 </template>
 
 <script>
-import freetry from './freetry.vue'
-export default {
-  components: { freetry }
-}
+export default {}
 </script>
 
 <style scoped lang="scss">

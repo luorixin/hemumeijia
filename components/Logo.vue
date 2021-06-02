@@ -9,12 +9,13 @@
 <style lang="scss">
 .header-logo {
   height: 100%;
-  width: 200px;
+  width: 2.133333rem /* 200/93.75 */;
   line-height: 0.448rem /* 42/93.75 */;
+  margin-right: 0.533333rem /* 50/93.75 */;
   display: flex;
   a {
     display: inline-block;
-    width: 1.109333rem /* 104/93.75 */;
+    // width: 1.109333rem /* 104/93.75 */;
     height: 0.448rem /* 42/93.75 */;
     padding: 0;
     // border-right: 1px solid #dfdfdf;

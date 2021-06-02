@@ -16,7 +16,7 @@
               v-for="(item, index) in headImgs"
               :key="'head_img_' + index"
             >
-              <el-image :src="item.src"></el-image>
+              <el-image style="height: 100%" fit="fill" :src="item.src"></el-image>
             </el-carousel-item>
           </el-carousel>
         </div>
@@ -99,16 +99,16 @@ export default {
     return {
       headImgs: [
         {
-          src: 'https://assets.weibanzhushou.com/web/we-work-webapp/website-landing-page_right-1-4.ad681e3fc1f0.png'
+          src: 'http://www.syddzjj.com/uploads/200407/1-20040FT14X30.jpg'
         },
         {
-          src: 'https://assets.weibanzhushou.com/web/we-work-webapp/website-landing-page_right-1-3.648979a32b8d.png'
+          src: 'http://www.syddzjj.com/uploads/200407/1-20040FT211943.jpg'
         },
         {
-          src: 'https://assets.weibanzhushou.com/web/we-work-webapp/website-landing-page_right-1-4.ad681e3fc1f0.png'
+          src: 'http://www.syddzjj.com/uploads/200407/1-20040FT22Qb.jpg'
         },
         {
-          src: 'https://assets.weibanzhushou.com/web/we-work-webapp/website-landing-page_right-1-1.150bc5376cbb.png'
+          src: 'http://www.syddzjj.com/uploads/200407/1-20040FT24A36.jpg'
         }
       ],
       featureImg: {
@@ -248,7 +248,7 @@ export default {
       }
       .head-carousel {
         position: absolute;
-        top: 1.066667rem /* 100/93.75 */;
+        top: .64rem /* 60/93.75 */;
         right: 1.109333rem /* 104/93.75 */;
         width: 7.658667rem /* 718/93.75 */;
         height: 4.309333rem /* 404/93.75 */;
