@@ -15,7 +15,7 @@
         </transition>
       </div>
     </el-main>
-    <el-footer class="myfooter" height="3.072rem">
+    <el-footer class="myfooter" height="1.92rem">
       <my-footer />
     </el-footer>
     <el-backtop target=".layout-default" :visibility-height="100"></el-backtop>
@@ -113,7 +113,7 @@ export default {
 .myfooter {
   position: relative;
   width: 100%;
-  height: 3.072rem /* 288/93.75 */;
+  height: 1.92rem /* 180/93.75 */;
   z-index: 3;
   background: #202020;
   display: flex;

@@ -7,19 +7,18 @@
       @select="handleSelect"
     >
       <el-menu-item index="index">网站首页</el-menu-item>
-      <el-submenu index="about">
+      <el-menu-item index="about">
         <template slot="title">公司概况</template>
-        <el-menu-item index="about">关于我们</el-menu-item>
-        <el-menu-item index="culture">企业文化</el-menu-item>
-      </el-submenu>
+      </el-menu-item>
       <el-submenu index="product">
         <template slot="title">产品中心</template>
         <el-menu-item index="sf">书房</el-menu-item>
         <el-menu-item index="dsg">电视柜</el-menu-item>
         <el-menu-item index="wsjj">卧室家具</el-menu-item>
       </el-submenu>
-      <el-menu-item index="news">新闻中心</el-menu-item>
       <el-menu-item index="feature">产品优势</el-menu-item>
+      <el-menu-item index="culture">企业文化</el-menu-item>
+      <el-menu-item index="business">招商加盟</el-menu-item>
       <el-menu-item index="concat">联系我们</el-menu-item>
     </el-menu>
   </div>

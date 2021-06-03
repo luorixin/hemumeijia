@@ -1,8 +1,12 @@
 <template>
   <div class="m-footer">
     <div class="footer-con">
-      iAdmanager
-      是爱点击集团旗下智能广告投放管家，整合了腾讯广告、快手两大媒体平台，通过数据化、自动化和智能化的方式，实现高效投放、精准数据分析、实时监测预警、智能辅助优化等诸多功能，提升广告运营的效率与效果。
+      <p>
+        CopyRight 2020 All Right Reserved 成都禾木美家有限公司 四川全屋定制家居
+      </p>
+      <p>
+        地址：彭州市经济开发区独柏路566号 电话：18781980404 传真：400-188-2538
+      </p>
     </div>
   </div>
 </template>
@@ -40,6 +44,9 @@ export default {
     text-align: center;
     line-height: 25px;
     width: 7.786667rem /* 730/93.75 */;
+    p {
+      margin-bottom: 0.213333rem /* 20/93.75 */;
+    }
   }
 }
 </style>
