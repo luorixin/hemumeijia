@@ -4,87 +4,155 @@
     <section class="home-screen">
       <div class="home-screen__head">
         <div class="head-text">
-          <div class="text-title">Parllay企微管家</div>
-          <div class="text-desc">基于企业微信构建营销自动化和用户增长体系</div>
-          <div class="text-opt">
-            <freetry type="primary">立即免费使用</freetry>
-          </div>
+          <div class="text-title">禾木美家</div>
+          <div class="text-desc">私人定制品味您的生活</div>
+          <div class="text-desc">匠心定制，专注中高端全屋定制家居生产!</div>
         </div>
         <div class="head-carousel">
           <el-carousel :interval="5000" arrow="always" height="4.309333rem">
-            <el-carousel-item
-              v-for="(item, index) in headImgs"
-              :key="'head_img_' + index"
-            >
+            <el-carousel-item v-for="(item, index) in headImgs" :key="'head_img_' + index">
               <el-image style="height: 100%" fit="fill" :src="item.src"></el-image>
             </el-carousel-item>
           </el-carousel>
         </div>
       </div>
     </section>
-    <section class="home-feature">
-      <div class="feature-title">
-        Parllay企微管家 助您打通微信用户数据，构建营销自动化与和用户增长体系
-      </div>
-      <div class="feature-bg">
-        <el-image class="feature-img" :src="featureImg.src"></el-image>
+    <section class="home-product">
+      <div class="container">
+        <div class="product-title">
+          <div class="product-head">
+            <h2>产品中心</h2>
+            <span></span>
+            <p>PRODUCT DISPLAY</p>
+          </div>
+        </div>
+        <div class="product-list">
+          <el-row :gutter="30">
+            <el-col
+              v-for="(item, key) in products"
+              :key="'product_' + key"
+              :xs="12"
+              :sm="12"
+              :md="8"
+              :lg="6"
+              :xl="6"
+            >
+              <div class="product-item">
+                <el-image lazy :src="item.img" :alt="item.name" fit="contain">
+                  <div slot="placeholder" class="image-slot">
+                    加载中
+                    <span class="dot">...</span>
+                  </div>
+                </el-image>
+                <p>{{ item.label }}</p>
+              </div>
+            </el-col>
+          </el-row>
+        </div>
       </div>
     </section>
-    <section class="home-detail">
-      <div class="detail-tabs">
-        <span
-          @mouseover="chaneTab(0)"
-          class="tab"
-          :class="{ active: activeTab === 0 }"
-          >高效获客</span
-        >
-        <span class="tabs-divider"></span>
-        <span
-          @mouseover="chaneTab(1)"
-          class="tab"
-          :class="{ active: activeTab === 1 }"
-          >销售转化</span
-        >
-        <span class="tabs-divider"></span>
-        <span
-          @mouseover="chaneTab(2)"
-          class="tab"
-          :class="{ active: activeTab === 2 }"
-          >社群运营</span
-        >
-        <span class="tabs-divider"></span>
-        <span
-          @mouseover="chaneTab(3)"
-          class="tab"
-          :class="{ active: activeTab === 3 }"
-          >企业风控</span
-        >
+    <section class="home-process">
+      <div class="container">
+        <el-row class="process-content">
+          <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" class="process-head">
+            <h2>家具轻松定制</h2>
+            <p>CUSTOMIZATION PROCESS</p>
+          </el-col>
+          <el-col :xs="12" :sm="12" :md="4" :lg="4" :xl="4" class="process-col">
+            <el-image
+              fit="contain"
+              src="http://www.syddzjj.com/skin/picture/58dccd9f04f1a_1.png"
+              alt="咨询预约"
+            ></el-image>
+            <h4>咨询预约</h4>
+          </el-col>
+          <el-col :xs="12" :sm="12" :md="4" :lg="4" :xl="4" class="process-col">
+            <el-image
+              fit="contain"
+              src="http://www.syddzjj.com/skin/picture/58dcce28f17d5_1.png"
+              alt="上门量尺"
+            ></el-image>
+            <h4>上门量尺</h4>
+          </el-col>
+          <el-col :xs="12" :sm="12" :md="4" :lg="4" :xl="4" class="process-col">
+            <el-image
+              fit="contain"
+              src="http://www.syddzjj.com/skin/picture/58dcce4f97f0f_1.png"
+              alt="工程报价"
+            ></el-image>
+            <h4>工程报价</h4>
+          </el-col>
+          <el-col :xs="12" :sm="12" :md="4" :lg="4" :xl="4" class="process-col">
+            <el-image
+              fit="contain"
+              src="http://www.syddzjj.com/skin/picture/58dcce794024d_1.png"
+              alt="批量生产"
+            ></el-image>
+            <h4>批量生产</h4>
+          </el-col>
+        </el-row>
       </div>
-      <div
-        class="detail-con wow animate__animated animate__fadeIn"
-        v-for="(detail, index) in detailCon"
-        :key="'detail_' + index"
-        v-show="index === activeTab"
-      >
-        <div class="detail-title">{{ detail.title }}</div>
-        <div class="detail-split">
-          <img :src="lineImg.src" alt />
+    </section>
+    <section class="home-about">
+      <div class="container">
+        <div class="about-title">
+          <div class="about-head">
+            <h2>公司简介</h2>
+            <span></span>
+            <p>COMPANY PROFILE</p>
+          </div>
         </div>
-        <div class="detail-content">
-          <div class="content-inner">
-            <div
-              class="inner-ul"
-              v-for="(item, key) in detail['detail']"
-              :key="'deatil_' + key"
-            >
-              <div class="inner-ul__title">{{ item.title }}</div>
-              <div class="inner-ul__desc">{{ item.desc }}</div>
+        <el-row :gutter="30">
+          <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" style="text-align: center">
+            <div class="about-img">
+              <el-image src="http://www.syddzjj.com/skin/picture/about_1.png" fit="contain"></el-image>
             </div>
+          </el-col>
+          <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+            <div class="about-content">
+              <p class="about-contents">
+                成都圣雅帝定制家居成立于
+                2010年，是一家集专业研发、生产、销售、安装、售后服务为一体的大型整体家具企业。公司拥有先进的全自动化的生产设备，和一流的技术工人。专注制造，倾心管理，圣雅帝以诚信与共赢的合作宗旨，把诚信、负责、创新、团队的服务精神传递到每一款产品中。产品涵盖整体卧房家具、整体书房家具、整体客厅家具、整体儿童房家具等四大系列,
+                以及衣帽间、整体衣柜、书柜、酒柜、电视柜、装饰柜、餐厅柜、床、床头柜、鞋柜、斗柜、移门等12个小类近百种产品，选材环保，款式新颖多样，满足全方位的居家生活。
+                2011年公司引入ISO9001质量管理体系，以世界品质为标准，将追求质量领先、服务最优、不断创新的宗旨融化于产品开发、产品生产和...
+              </p>
+            </div>
+            <el-button type="plain">查看详细</el-button>
+          </el-col>
+        </el-row>
+      </div>
+    </section>
+    <section class="home-example">
+      <div class="container">
+        <div class="example-title">
+          <div class="example-head">
+            <h2>工程案例</h2>
+            <span></span>
+            <p>ENGINEERING CASE</p>
           </div>
-          <div class="content-img">
-            <img :src="detail.img" alt />
-            <div class="content-imgbg"></div>
-          </div>
+        </div>
+        <div class="example-list">
+          <el-row :gutter="30">
+            <el-col
+              v-for="(item, key) in examples"
+              :key="'example_' + key"
+              :xs="12"
+              :sm="12"
+              :md="8"
+              :lg="8"
+              :xl="8"
+            >
+              <div class="example-item">
+                <el-image lazy :src="item.img" :alt="item.name" fit="contain">
+                  <div slot="placeholder" class="image-slot">
+                    加载中
+                    <span class="dot">...</span>
+                  </div>
+                </el-image>
+                <p>{{ item.label }}</p>
+              </div>
+            </el-col>
+          </el-row>
         </div>
       </div>
     </section>
@@ -92,9 +160,11 @@
   </section>
 </template>
 <script>
-import freetry from '../components/common/header/freetry.vue'
+if (process.browser) {
+  // 在这里根据环境引入wow.js
+  var { WOW } = require('wowjs')
+}
 export default {
-  components: { freetry },
   data() {
     return {
       headImgs: [
@@ -117,81 +187,75 @@ export default {
       lineImg: {
         src: '/img/icon_04.png'
       },
-      activeTab: 0,
-      detailCon: [
+      products: [
         {
-          title: '高效获客',
-          img: '/img/高效获客@2x.png',
-          detail: [
-            {
-              title: '批量加好友',
-              desc: '为员工创建批量添加好友任务，备注、标签自动同步，实时反馈添加详情，可支持一次上传多个客户分配给多个员工'
-            },
-            {
-              title: '智能码',
-              desc: '广告投放、线下活动、内容营销…不同渠道匹配不同智能码，以此追踪获客轨迹，改善营销效果，并分配指派不同员工，自动发送欢迎语、打标签'
-            },
-            {
-              title: '一客一码',
-              desc: '为每个客户生成专属二维码名片，清晰反馈老客户带新客户情况，企业可追溯客源'
-            }
-          ]
+          label: '衣帽间',
+          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
         },
         {
-          title: '销售转化',
-          img: '/img/销售转化@2x.png',
-          detail: [
-            {
-              title: '客户动态',
-              desc: '客户的行为路径实时同步，帮助分析客户意向，关键行为提醒，帮助销售转化促单'
-            },
-            {
-              title: '素材分享',
-              desc: '企业配置素材库，销售添加智能码，记录客户分享链路，生成客户关系网，分析客户决策者，帮助销售了解客户关系'
-            },
-            {
-              title: '历史朋友圈',
-              desc: '可为员工添加历史朋友圈，销售也可自己添加朋友圈，丰富销售个人对外展示资料，供客户全方位了解企业及员工详情'
-            }
-          ]
+          label: '衣帽间',
+          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
         },
         {
-          title: '社群运营',
-          img: '/img/社群运营@2x.png',
-          detail: [
-            {
-              title: '群SOP',
-              desc: '制定推送规则，系统自动提醒群主执行规则发送消息，有效触达客户，制定客户关怀流程'
-            },
-            {
-              title: '自动拉群',
-              desc: '创建社群智能码，先将客户添加到员工账号中，再通过欢迎语邀请客户加入群聊，对进群的客户自动打标签'
-            },
-            {
-              title: '标签建群',
-              desc: '根据客户标签建群，企业可以有针对性地给不同特征的客户群制定不同的的社群运营方案，社群运营起来也会更高效，更利于群转化'
-            }
-          ]
+          label: '衣帽间',
+          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
         },
         {
-          title: '企业风控',
-          img: '/img/企业风控@2x.png',
-          detail: [
-            {
-              title: '聊天违规提醒',
-              desc: '合规化存档企业微信聊天内容，便于会话质检和内部管理运营，避免客服、运营人员会话不规范'
-            },
-            {
-              title: '客户流失提醒',
-              desc: '客户流失提醒、员工删除客户预警，企业内部可控管理，方便采取挽回沟通措施'
-            },
-            {
-              title: '离职继承',
-              desc: '企业可将离职员工客户分配给其他员工，减少企业客户资源流失，也减少服务中断对客户服务体验的影响'
-            }
-          ]
+          label: '衣帽间',
+          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+        },
+        {
+          label: '衣帽间',
+          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+        },
+        {
+          label: '衣帽间',
+          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+        },
+        {
+          label: '衣帽间',
+          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+        },
+        {
+          label: '衣帽间',
+          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+        }
+      ],
+      examples: [
+        {
+          label: '地中海风格',
+          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
+        },
+        {
+          label: '地中海风格',
+          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
+        },
+        {
+          label: '地中海风格',
+          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
+        },
+        {
+          label: '地中海风格',
+          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
+        },
+        {
+          label: '地中海风格',
+          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
+        },
+        {
+          label: '地中海风格',
+          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
         }
       ]
+    }
+  },
+  mounted() {
+    if (process.browser) {
+      // 在页面mounted生命周期里面 根据环境实例化WOW
+      new WOW({
+        live: false,
+        offset: 0
+      }).init()
     }
   },
   methods: {
@@ -213,7 +277,12 @@ export default {
     left: 0;
     width: 100%;
     height: 6.186667rem /* 580/93.75 */;
-    background: linear-gradient(70deg,rgba(245,244,254,.9),#f9fcff 44%,#eef5ff);
+    background: linear-gradient(
+      70deg,
+      rgba(245, 244, 254, 0.9),
+      #f9fcff 44%,
+      #eef5ff
+    );
   }
   .home-screen {
     position: relative;
@@ -232,9 +301,9 @@ export default {
           letter-spacing: 0;
           height: 0.896rem /* 84/93.75 */;
           line-height: 0.896rem /* 84/93.75 */;
+          margin-bottom: 0.096rem /* 9/93.75 */;
         }
         .text-desc {
-          margin-top: 0.096rem /* 9/93.75 */;
           font-family: PingFangSC-Regular;
           font-size: 0.192rem /* 18/93.75 */;
           color: #333;
@@ -248,138 +317,210 @@ export default {
       }
       .head-carousel {
         position: absolute;
-        top: .64rem /* 60/93.75 */;
+        top: 1rem;
         right: 1.109333rem /* 104/93.75 */;
         width: 7.658667rem /* 718/93.75 */;
         height: 4.309333rem /* 404/93.75 */;
       }
     }
   }
-  .home-feature {
+  .home-product {
     position: relative;
-    background: #fff;
-    height: 7.04rem /* 660/93.75 */;
-    .feature-title {
-      margin: 0.96rem auto /* 90/93.75 */;
+    padding-bottom: 0.32rem /* 30/93.75 */;
+    .product-title {
+      margin: 0.48rem /* 45/93.75 */ 0px 0px 0px;
       width: 100%;
-      font-family: PingFangSC-Semibold;
-      font-size: 0.256rem /* 24/93.75 */;
-      color: #626262;
-      letter-spacing: 0.014613rem /* 1.37/93.75 */;
-      text-align: center;
+      .product-head {
+        position: relative;
+        margin-bottom: 0.32rem /* 30/93.75 */;
+        h2 {
+          font-size: 0.256rem /* 24/93.75 */;
+          text-align: center;
+          color: #434343;
+          margin: 0;
+        }
+        span {
+          display: block;
+          width: 1.386667rem /* 130/93.75 */;
+          margin: 0 auto;
+          border-bottom: 0.021333rem /* 2/93.75 */ solid #56240e;
+          margin-top: 0.106667rem /* 10/93.75 */;
+          position: relative;
+          top: 1px;
+          z-index: 100;
+        }
+        p {
+          text-align: center;
+          padding-top: 8px;
+          font-size: 18px;
+          color: #b1afaf;
+          border-top: 1px solid #d9d9d9;
+        }
+      }
     }
-    .feature-bg {
-      width: 100%;
-      height: 3.914667rem /* 367/93.75 */;
-      .feature-img {
-        width: 12.405333rem /* 1163/93.75 */;
-        height: 100%;
-        margin: auto;
-        display: block;
+    .product-list {
+      position: relative;
+      .product-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 250px;
+        p {
+          font-size: 0.170667rem /* 16/93.75 */;
+          margin-bottom: 0.106667rem; /* 10/93.75 */
+        }
       }
     }
   }
-  .home-detail {
-    position: relative;
-    height: 7.189333rem /* 674/93.75 */;
-    .detail-tabs {
-      background: #fff;
-      height: 1.536rem /* 144/93.75 */;
-      padding: 0.544rem /* 51/93.75 */;
+  .home-process {
+    padding: 0.213333rem /* 20/93.75 */ 0.32rem /* 30/93.75 */;
+    margin: 0 auto;
+    background: linear-gradient(
+      70deg,
+      rgba(245, 244, 254, 0.9),
+      #f9fcff 44%,
+      #eef5ff
+    );
+    .process-content {
+      width: 100%;
       display: flex;
-      justify-content: center;
       align-items: center;
-      span.tab {
-        font-family: PingFangSC-Regular;
-        font-size: 0.32rem /* 30/93.75 */;
-        color: #2b2b2b;
-        height: 0.448rem /* 42/93.75 */;
-        line-height: 0.448rem /* 42/93.75 */;
-        letter-spacing: -0.64px;
-        margin: 0 0.661333rem /* 62/93.75 */;
-        cursor: pointer;
-        &.active {
-          color: #e66041;
+      .process-head {
+        h2 {
+          font-size: 0.234667rem /* 22/93.75 */;
+          margin-bottom: 0.106667rem /* 10/93.75 */;
+        }
+        p {
+          font-size: 0.170667rem /* 16/93.75 */;
         }
       }
-      .tabs-divider {
-        width: 0.032rem /* 3/93.75 */;
-        height: 0.352rem /* 33/93.75 */;
-        background: #979797;
+      .process-col {
+        text-align: center;
+        h4 {
+          margin-top: 0.106667rem; /* 10/93.75 */
+        }
+        /deep/ img {
+          display: block;
+          margin: 0 auto;
+          max-width: 110px;
+          transition: transform 0.5s ease-out;
+          &:hover {
+            transform: rotateZ(360deg);
+          }
+        }
       }
     }
-    .detail-con {
-      background: #f5f5f5;
-      height: 5.653333rem; /* 530/93.75 */
-      overflow: hidden;
-      transition: all 0.5s;
-      .detail-title {
-        font-family: PingFangSC-Regular;
-        font-size: 0.341333rem /* 32/93.75 */;
-        color: #2b2b2b;
-        letter-spacing: -0.69px;
-        margin-top: 0.746667rem /* 70/93.75 */;
-        margin-left: 1.834667rem /* 172/93.75 */;
-      }
-      .detail-split {
-        width: 0.32rem /* 30/93.75 */;
-        height: 0.064rem /* 6/93.75 */;
-        margin-top: 0.16rem /* 15/93.75 */;
-        margin-left: 1.834667rem /* 172/93.75 */;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-      .detail-content {
-        margin-top: 0.501333rem /* 47/93.75 */;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 1.834667rem /* 172/93.75 */;
-        padding-right: 1.632rem /* 153/93.75 */;
+  }
+  .home-about {
+    position: relative;
+    padding-bottom: 0.32rem /* 30/93.75 */;
+    .about-title {
+      margin: 0.48rem /* 45/93.75 */ 0px 0px 0px;
+      width: 100%;
+      .about-head {
         position: relative;
-        .content-inner {
-          display: flex;
-          flex-direction: column;
-          width: 7.434667rem /* 697/93.75 */;
-          .inner-ul {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0.213333rem /* 20/93.75 */ 0;
-            .inner-ul__title {
-              width: 1.109333rem /* 104/93.75 */;
-              height: 0.32rem /* 30/93.75 */;
-              line-height: 0.32rem;
-              background: #e66041;
-              text-align: center;
-              font-family: PingFangSC-Regular;
-              font-size: 0.149333rem /* 14/93.75 */;
-              color: #fffcfc;
-              letter-spacing: -0.3px;
-            }
-            .inner-ul__desc {
-              font-family: PingFangSC-Regular;
-              font-size: 0.170667rem /* 16/93.75 */;
-              width: 5.898667rem /* 553/93.75 */;
-              color: #2b2b2b;
-              letter-spacing: -0.34px;
-              line-height: 0.288rem /* 27/93.75 */;
-            }
-          }
+        margin-bottom: 0.32rem /* 30/93.75 */;
+        h2 {
+          font-size: 0.256rem /* 24/93.75 */;
+          text-align: center;
+          color: #434343;
+          margin: 0;
         }
-        .content-img {
-          width: 3.541333rem /* 332/93.75 */;
-          height: 2.133333rem /* 200/93.75 */;
+        span {
+          display: block;
+          width: 1.386667rem /* 130/93.75 */;
+          margin: 0 auto;
+          border-bottom: 0.021333rem /* 2/93.75 */ solid #56240e;
+          margin-top: 0.106667rem /* 10/93.75 */;
           position: relative;
-          z-index: 55;
-          & > img {
-            width: 100%;
-            height: 100%;
-          }
+          top: 1px;
+          z-index: 100;
+        }
+        p {
+          text-align: center;
+          padding-top: 8px;
+          font-size: 18px;
+          color: #b1afaf;
+          border-top: 1px solid #d9d9d9;
         }
       }
+    }
+    .about-content {
+      line-height: 0.362667rem /* 34/93.75 */;
+      color: #777;
+      width: 100%;
+      margin-bottom: 0.213333rem /* 20/93.75 */;
+      .about-contents {
+        font-size: 0.192rem /* 18/93.75 */;
+      }
+    }
+  }
+  .home-example {
+    position: relative;
+    padding-bottom: 0.32rem /* 30/93.75 */;
+    .example-title {
+      margin: 0.48rem /* 45/93.75 */ 0px 0px 0px;
+      width: 100%;
+      .example-head {
+        position: relative;
+        margin-bottom: 0.32rem /* 30/93.75 */;
+        h2 {
+          font-size: 0.256rem /* 24/93.75 */;
+          text-align: center;
+          color: #434343;
+          margin: 0;
+        }
+        span {
+          display: block;
+          width: 1.386667rem /* 130/93.75 */;
+          margin: 0 auto;
+          border-bottom: 0.021333rem /* 2/93.75 */ solid #56240e;
+          margin-top: 0.106667rem /* 10/93.75 */;
+          position: relative;
+          top: 1px;
+          z-index: 100;
+        }
+        p {
+          text-align: center;
+          padding-top: 8px;
+          font-size: 18px;
+          color: #b1afaf;
+          border-top: 1px solid #d9d9d9;
+        }
+      }
+    }
+    .example-list {
+      position: relative;
+      .example-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 250px;
+        p {
+          font-size: 0.170667rem /* 16/93.75 */;
+          margin-bottom: 0.106667rem; /* 10/93.75 */
+        }
+      }
+    }
+  }
+  .container {
+    margin: auto;
+  }
+  @media (min-width: 769px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
     }
   }
 }

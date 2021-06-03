@@ -28,8 +28,8 @@ export default {
   plugins: [
     '@/plugins/element-ui/element-ui',
     '@/plugins/filter',
-    '@/plugins/i18n',
-    { src: '@/plugins/wow', ssr: false }
+    '@/plugins/i18n'
+    // { src: '@/plugins/wow', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

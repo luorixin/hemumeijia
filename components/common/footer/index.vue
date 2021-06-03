@@ -1,6 +1,5 @@
 <template>
   <div class="m-footer">
-    <el-image fit="fill" class="footer-img" :src="codeImg" />
     <div class="footer-con">
       iAdmanager
       是爱点击集团旗下智能广告投放管家，整合了腾讯广告、快手两大媒体平台，通过数据化、自动化和智能化的方式，实现高效投放、精准数据分析、实时监测预警、智能辅助优化等诸多功能，提升广告运营的效率与效果。
