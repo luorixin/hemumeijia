@@ -66,7 +66,7 @@ export default {
     MySidebar
   },
   beforeCreate() {
-    this.$store.commit('SET_MENU', 'about')
+    this.$store.commit('SET_MENU', 'feature')
   },
   data() {
     return {

@@ -11,8 +11,8 @@ export default {
       { hid: 'description', name: 'description', content: '禾木美家' },
       { name: 'referrer', content: 'no-referrer' } // 解决 网络图片 img 403问题
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [{ src: '/rem.js', type: 'text/javascript', charset: 'utf-8' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: './favicon.ico' }],
+    script: [{ src: './rem.js', type: 'text/javascript', charset: 'utf-8' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -73,7 +73,8 @@ export default {
     }
   },
   router: {
-    mode: 'history',
+    mode: process.env.NODE_ENV === 'production' ? 'hash' : 'history',
+    base: process.env.NODE_ENV === 'production' ? './' : '/',
     scrollBehavior(to, from, savedPosition) {
       if (savedPosition) {
         return savedPosition

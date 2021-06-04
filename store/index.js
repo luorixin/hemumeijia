@@ -6,7 +6,7 @@ export const strict = false
 const state = () => ({
   locales: ['en', 'zh-CN'],
   locale: 'zh-CN',
-  currentMenu: 'index',
+  currentMenu: '/',
   hideHead: false
 })
 

@@ -6,15 +6,16 @@
       mode="horizontal"
       @select="handleSelect"
     >
-      <el-menu-item index="index">网站首页</el-menu-item>
+      <el-menu-item index="/">网站首页</el-menu-item>
       <el-menu-item index="about">
         <template slot="title">公司概况</template>
       </el-menu-item>
       <el-submenu index="product">
         <template slot="title">产品中心</template>
-        <el-menu-item index="sf">书房</el-menu-item>
-        <el-menu-item index="dsg">电视柜</el-menu-item>
-        <el-menu-item index="wsjj">卧室家具</el-menu-item>
+        <el-menu-item index="product/livingRoom">客厅</el-menu-item>
+        <el-menu-item index="product/kitchen">厨房</el-menu-item>
+        <el-menu-item index="product/bedroom">卧室</el-menu-item>
+        <el-menu-item index="product/study">书房</el-menu-item>
       </el-submenu>
       <el-menu-item index="feature">产品优势</el-menu-item>
       <el-menu-item index="culture">企业文化</el-menu-item>
@@ -36,8 +37,8 @@ export default {
   },
   methods: {
     handleSelect(key, keyPath) {
-      this.$router.push({
-        name: key
+      this.$router.replace({
+        path: '/' + key
       })
     }
   }
