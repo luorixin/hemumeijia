@@ -251,8 +251,8 @@ export default {
           img: './img/keting2.png'
         },
         {
-          label: '美式客厅',
-          img: './img/keting5.png'
+          label: '榻榻米混搭',
+          img: './img/tatami2.png'
         },
         {
           label: '欧式客厅',
