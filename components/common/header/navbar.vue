@@ -37,8 +37,9 @@ export default {
   },
   methods: {
     handleSelect(key, keyPath) {
+      const prefix = key === '/' ? '' : '/'
       this.$router.replace({
-        path: '/' + key
+        path: prefix + key
       })
     }
   }

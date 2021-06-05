@@ -65,39 +65,39 @@ export default {
   },
   data() {
     return {
-      aboutBg: 'http://www.syddzjj.com/skin/images/57356d18dfece_1.jpg',
+      aboutBg: './img/aboutBg.jpg',
       products: [
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '厨房混搭',
+          img: './img/chufang1.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '厨房混搭',
+          img: './img/chufang2.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '厨房混搭',
+          img: './img/chufang3.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '厨房混搭',
+          img: './img/chufang1.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '厨房混搭',
+          img: './img/chufang2.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '厨房混搭',
+          img: './img/chufang3.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '厨房混搭',
+          img: './img/chufang1.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '厨房混搭',
+          img: './img/chufang2.png'
         }
       ]
     }
@@ -110,7 +110,7 @@ export default {
   position: relative;
   .about-bg {
     width: 100%;
-    height: 2.733333rem /* 350/93.75 */;
+    // height: 2.733333rem /* 350/93.75 */;
     margin-top: 0.64rem /* 60/93.75 */;
     img {
       width: 100%;
@@ -120,7 +120,7 @@ export default {
   .about-con {
     position: relative;
     margin-bottom: 0.32rem /* 30/93.75 */;
-    margin-top: 0.373333rem /* 35/93.75 */;
+    // margin-top: 0.373333rem /* 35/93.75 */;
     .about-box {
       clear: both;
       padding-top: 0.106667rem /* 10/93.75 */;
@@ -142,7 +142,7 @@ export default {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 250px;
+            min-height: 2.133333rem /* 200/93.75 */;
             p {
               font-size: 0.170667rem /* 16/93.75 */;
               margin-bottom: 0.106667rem; /* 10/93.75 */

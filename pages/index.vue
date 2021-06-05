@@ -6,12 +6,12 @@
         <div class="head-text">
           <div class="text-title">禾木美家</div>
           <div class="text-desc">私人定制品味您的生活</div>
-          <div class="text-desc">匠心定制，专注中高端全屋定制家居生产!</div>
+          <div class="text-desc">专注中高端全屋定制家居生产!</div>
         </div>
         <div class="head-carousel">
           <el-carousel :interval="5000" arrow="always" height="4.309333rem">
             <el-carousel-item v-for="(item, index) in headImgs" :key="'head_img_' + index">
-              <el-image style="height: 100%" fit="fill" :src="item.src"></el-image>
+              <img style="height: 100%; object-fit: cover; object-position: left" :src="item.src" />
             </el-carousel-item>
           </el-carousel>
         </div>
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="product-list">
-          <el-row :gutter="30">
+          <el-row :gutter="20">
             <el-col
               v-for="(item, key) in products"
               :key="'product_' + key"
@@ -129,7 +129,9 @@
                 高端用户提供更优质的定制家具为使命，领跑全屋定制家居企业。
               </p>
             </div>
-            <el-button type="plain">查看详细</el-button>
+            <el-button type="plain">
+              <nuxt-link to="about">查看详细</nuxt-link>
+            </el-button>
           </el-col>
         </el-row>
       </div>
@@ -181,16 +183,10 @@ export default {
     return {
       headImgs: [
         {
-          src: 'http://www.syddzjj.com/uploads/200407/1-20040FT14X30.jpg'
+          src: './img/head1.jpg'
         },
         {
-          src: 'http://www.syddzjj.com/uploads/200407/1-20040FT211943.jpg'
-        },
-        {
-          src: 'http://www.syddzjj.com/uploads/200407/1-20040FT22Qb.jpg'
-        },
-        {
-          src: 'http://www.syddzjj.com/uploads/200407/1-20040FT24A36.jpg'
+          src: './img/head2.jpg'
         }
       ],
       featureImg: {
@@ -201,62 +197,70 @@ export default {
       },
       products: [
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '新中式客厅',
+          img: './img/keting1.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '新中式卧室',
+          img: './img/woshi1.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '欧式客厅',
+          img: './img/keting2.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '欧式卧室',
+          img: './img/woshi2.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '厨房混搭',
+          img: './img/chufang1.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '厨房混搭',
+          img: './img/chufang2.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '榻榻米混搭',
+          img: './img/tatami1.png'
         },
         {
-          label: '衣帽间',
-          img: 'http://www.syddzjj.com/uploads/allimg/191011/1-1910111504410-L.jpeg'
+          label: '榻榻米混搭',
+          img: './img/tatami3.png'
         }
+        // {
+        //   label: '厨房混搭',
+        //   img: './img/chufang1.png'
+        // },
+        // {
+        //   label: '榻榻米混搭',
+        //   img: './img/tatami1.png'
+        // }
       ],
       examples: [
         {
-          label: '地中海风格',
-          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
+          label: '现代风格客厅',
+          img: './img/keting9.png'
         },
         {
-          label: '地中海风格',
-          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
+          label: '新中式卧室',
+          img: './img/woshi1.png'
         },
         {
-          label: '地中海风格',
-          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
+          label: '欧式客厅',
+          img: './img/keting2.png'
         },
         {
-          label: '地中海风格',
-          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
+          label: '美式客厅',
+          img: './img/keting5.png'
         },
         {
-          label: '地中海风格',
-          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
+          label: '欧式客厅',
+          img: './img/keting2.png'
         },
         {
-          label: '地中海风格',
-          img: 'http://www.syddzjj.com/uploads/allimg/191012/1-1910121109450-L.jpg'
+          label: '美式客厅',
+          img: './img/keting5.png'
         }
       ]
     }
@@ -330,8 +334,8 @@ export default {
       .head-carousel {
         position: absolute;
         top: 1rem;
-        right: 1.109333rem /* 104/93.75 */;
-        width: 7.658667rem /* 718/93.75 */;
+        right: 0.32rem /* 30/93.75 */;
+        width: 9.6rem /* 900/93.75 */;
         height: 4.309333rem /* 404/93.75 */;
       }
     }
@@ -377,7 +381,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 250px;
+        // min-height: 250px;
         p {
           font-size: 0.170667rem /* 16/93.75 */;
           margin-bottom: 0.106667rem; /* 10/93.75 */
@@ -386,7 +390,7 @@ export default {
     }
   }
   .home-process {
-    padding: 0.213333rem /* 20/93.75 */ 0.32rem /* 30/93.75 */;
+    padding: 0.213333rem /* 20/93.75 */ 0;
     margin: 0 auto;
     background: linear-gradient(
       70deg,
@@ -463,6 +467,7 @@ export default {
       color: #777;
       width: 100%;
       margin-bottom: 0.213333rem /* 20/93.75 */;
+      margin-top: 0.213333rem /* 20/93.75 */;
       .about-contents {
         font-size: 0.192rem /* 18/93.75 */;
       }
@@ -509,7 +514,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 250px;
+        // min-height: 250px;
         p {
           font-size: 0.170667rem /* 16/93.75 */;
           margin-bottom: 0.106667rem; /* 10/93.75 */

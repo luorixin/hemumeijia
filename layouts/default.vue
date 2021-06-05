@@ -83,7 +83,6 @@ export default {
 .layout-default {
   height: 100vh;
   width: 100%;
-  min-width: 10.922667rem /* 1024/93.75 */;
   overflow: scroll;
   * {
     box-sizing: border-box;
@@ -108,6 +107,7 @@ export default {
 }
 .mymain {
   padding: 0;
+  margin-bottom: 0.213333rem /* 20/93.75 */;
   overflow: unset;
 }
 .myfooter {

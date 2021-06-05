@@ -18,9 +18,9 @@
             <div class="contents">
               <p>联系人：王先生</p>
               <br />
-              <p>联系电话：18781980404 15928696580</p>
+              <p>联系电话：18328550119</p>
               <br />
-              <p>联系地址：彭州市经济开发区独柏路566号</p>
+              <p>联系地址：成都市新都区蓉都大道北三段禾木美家全屋定制</p>
             </div>
           </div>
         </el-col>
@@ -44,7 +44,7 @@ export default {
   },
   data() {
     return {
-      aboutBg: 'http://www.syddzjj.com/skin/images/57356d18dfece_1.jpg'
+      aboutBg: './img/aboutBg.jpg'
     }
   }
 }
@@ -55,7 +55,7 @@ export default {
   position: relative;
   .about-bg {
     width: 100%;
-    height: 2.733333rem /* 350/93.75 */;
+    // height: 2.733333rem /* 350/93.75 */;
     margin-top: 0.64rem /* 60/93.75 */;
     img {
       width: 100%;
@@ -65,7 +65,7 @@ export default {
   .about-con {
     position: relative;
     margin-bottom: 0.32rem /* 30/93.75 */;
-    margin-top: 0.373333rem /* 35/93.75 */;
+    // margin-top: 0.373333rem /* 35/93.75 */;
     .about-box {
       clear: both;
       padding-top: 0.106667rem /* 10/93.75 */;

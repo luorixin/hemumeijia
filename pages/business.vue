@@ -104,7 +104,7 @@ export default {
   },
   data() {
     return {
-      aboutBg: 'http://www.syddzjj.com/skin/images/57356d18dfece_1.jpg'
+      aboutBg: './img/aboutBg.jpg'
     }
   }
 }
@@ -115,7 +115,7 @@ export default {
   position: relative;
   .about-bg {
     width: 100%;
-    height: 2.733333rem /* 350/93.75 */;
+    // height: 2.733333rem /* 350/93.75 */;
     margin-top: 0.64rem /* 60/93.75 */;
     img {
       width: 100%;
@@ -125,7 +125,7 @@ export default {
   .about-con {
     position: relative;
     margin-bottom: 0.32rem /* 30/93.75 */;
-    margin-top: 0.373333rem /* 35/93.75 */;
+    // margin-top: 0.373333rem /* 35/93.75 */;
     .about-box {
       clear: both;
       padding-top: 0.106667rem /* 10/93.75 */;
