@@ -105,13 +105,13 @@
         <el-row :gutter="30">
           <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" style="text-align: center">
             <div class="about-img">
-              <el-image src="http://www.syddzjj.com/skin/picture/about_1.png" fit="contain"></el-image>
+              <el-image :src="featureImg.src" fit="contain"></el-image>
             </div>
           </el-col>
           <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
             <div class="about-content">
               <p class="about-contents">
-                成都禾木美家定制家具有限公司是一家专业生产整体衣柜、衣帽
+                成都禾木美家全屋定制具有20年家具行业生产经验，是一家专业生产整体衣柜、衣帽
                 间、书柜、酒柜等多种系列的家居制品公司，同时也是集设计、
                 销售、服务于一体的一家综合性家居服务公司。自创立以来就以The
                 creator of the comfortable
@@ -134,6 +134,40 @@
             </el-button>
           </el-col>
         </el-row>
+      </div>
+    </section>
+    <section class="home-credit">
+      <div class="container">
+        <div class="credit-title">
+          <div class="credit-head">
+            <h2>获得证书</h2>
+            <span></span>
+            <p>CREDIT DISPLAY</p>
+          </div>
+        </div>
+        <div class="credit-list">
+          <el-row :gutter="20">
+            <el-col
+              v-for="(item, key) in credits"
+              :key="'credit_' + key"
+              :xs="12"
+              :sm="12"
+              :md="8"
+              :lg="6"
+              :xl="6"
+            >
+              <div class="credit-item">
+                <el-image lazy :src="item.img" :alt="item.name" fit="contain">
+                  <div slot="placeholder" class="image-slot">
+                    加载中
+                    <span class="dot">...</span>
+                  </div>
+                </el-image>
+                <p>{{ item.label }}</p>
+              </div>
+            </el-col>
+          </el-row>
+        </div>
       </div>
     </section>
     <section class="home-example">
@@ -190,10 +224,7 @@ export default {
         }
       ],
       featureImg: {
-        src: '/img/Group15@2x.png'
-      },
-      lineImg: {
-        src: '/img/icon_04.png'
+        src: './img/headDesc.png'
       },
       products: [
         {
@@ -261,6 +292,24 @@ export default {
         {
           label: '美式客厅',
           img: './img/keting5.png'
+        }
+      ],
+      credits: [
+        {
+          label: '证书',
+          img: './img/证书3.jpg'
+        },
+        {
+          label: '证书',
+          img: './img/证书2.jpg'
+        },
+        {
+          label: '证书',
+          img: './img/证书1.jpg'
+        },
+        {
+          label: '证书',
+          img: './img/证书4.jpg'
         }
       ]
     }
@@ -337,6 +386,55 @@ export default {
         right: 0.32rem /* 30/93.75 */;
         width: 9.6rem /* 900/93.75 */;
         height: 4.309333rem /* 404/93.75 */;
+      }
+    }
+  }
+  .home-credit {
+    position: relative;
+    padding-bottom: 0.32rem /* 30/93.75 */;
+    .credit-title {
+      margin: 0.48rem /* 45/93.75 */ 0px 0px 0px;
+      width: 100%;
+      .credit-head {
+        position: relative;
+        margin-bottom: 0.32rem /* 30/93.75 */;
+        h2 {
+          font-size: 0.256rem /* 24/93.75 */;
+          text-align: center;
+          color: #434343;
+          margin: 0;
+        }
+        span {
+          display: block;
+          width: 1.386667rem /* 130/93.75 */;
+          margin: 0 auto;
+          border-bottom: 0.021333rem /* 2/93.75 */ solid #56240e;
+          margin-top: 0.106667rem /* 10/93.75 */;
+          position: relative;
+          top: 1px;
+          z-index: 100;
+        }
+        p {
+          text-align: center;
+          padding-top: 8px;
+          font-size: 18px;
+          color: #b1afaf;
+          border-top: 1px solid #d9d9d9;
+        }
+      }
+    }
+    .credit-list {
+      position: relative;
+      .credit-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // min-height: 250px;
+        p {
+          font-size: 0.170667rem /* 16/93.75 */;
+          margin-bottom: 0.106667rem; /* 10/93.75 */
+        }
       }
     }
   }
@@ -470,6 +568,7 @@ export default {
       margin-top: 0.213333rem /* 20/93.75 */;
       .about-contents {
         font-size: 0.192rem /* 18/93.75 */;
+        color: #479578;
       }
     }
   }

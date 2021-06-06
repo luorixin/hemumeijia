@@ -96,7 +96,7 @@ export default {
         },
         {
           href: '/product/study',
-          label: '书房'
+          label: '榻榻米'
         }
       ]
     }

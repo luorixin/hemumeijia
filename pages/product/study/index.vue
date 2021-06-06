@@ -14,7 +14,7 @@
           style="float: right"
         >
           <div class="about-box">
-            <h2 class="left_h">书房</h2>
+            <h2 class="left_h">榻榻米</h2>
             <div class="contents product-list">
               <el-row :gutter="30">
                 <el-col
