@@ -17,8 +17,9 @@
             <h2 class="left_h">关于我们</h2>
             <div class="contents">
               <p>
-                &nbsp; &nbsp;&nbsp;禾木美家全屋定制，是专业的定制家具企业，自
-                创立以来就以The creator of the comfortable
+                &nbsp;
+                &nbsp;&nbsp;禾木美家全屋定制，是红泰家居全新子品牌公司，具有20多年的家具行业经验，自创立以来就以The
+                creator of the comfortable
                 room(惬意空间的创造者)为己任，致力于用
                 原创设计，为千千万万消费者家庭定制舒适、环 保、便捷的定制家具。
               </p>
@@ -58,6 +59,37 @@
                 &nbsp;
                 &nbsp;非凡创造历史，发展永不止步。禾木美家定制家居将坚守“品质与服务打造强势品牌”的经营理念，尽力为家居生活提供优质健康的产品。
               </p>
+              <br />
+              <p>&nbsp; &nbsp;取得证书：</p>
+              <br />
+              <div class="credit-list">
+                <el-row :gutter="20">
+                  <el-col
+                    v-for="(item, key) in credits"
+                    :key="'credit_' + key"
+                    :xs="12"
+                    :sm="12"
+                    :md="8"
+                    :lg="6"
+                    :xl="6"
+                  >
+                    <div class="credit-item">
+                      <el-image
+                        lazy
+                        :src="item.img"
+                        :alt="item.name"
+                        fit="contain"
+                      >
+                        <div slot="placeholder" class="image-slot">
+                          加载中
+                          <span class="dot">...</span>
+                        </div>
+                      </el-image>
+                      <p></p>
+                    </div>
+                  </el-col>
+                </el-row>
+              </div>
             </div>
           </div>
         </el-col>
@@ -81,7 +113,25 @@ export default {
   },
   data() {
     return {
-      aboutBg: 'http://www.syddzjj.com/skin/images/57356d18dfece_1.jpg'
+      aboutBg: './img/aboutBg.jpg',
+      credits: [
+        {
+          label: '证书',
+          img: './img/证书3.jpg'
+        },
+        {
+          label: '证书',
+          img: './img/证书2.jpg'
+        },
+        {
+          label: '证书',
+          img: './img/证书1.jpg'
+        },
+        {
+          label: '证书',
+          img: './img/证书4.jpg'
+        }
+      ]
     }
   }
 }
@@ -92,7 +142,7 @@ export default {
   position: relative;
   .about-bg {
     width: 100%;
-    height: 2.733333rem /* 350/93.75 */;
+    // height: 2.733333rem /* 350/93.75 */;
     margin-top: 0.64rem /* 60/93.75 */;
     img {
       width: 100%;
@@ -102,7 +152,7 @@ export default {
   .about-con {
     position: relative;
     margin-bottom: 0.32rem /* 30/93.75 */;
-    margin-top: 0.373333rem /* 35/93.75 */;
+    // margin-top: 0.373333rem /* 35/93.75 */;
     .about-box {
       clear: both;
       padding-top: 0.106667rem /* 10/93.75 */;
@@ -127,6 +177,20 @@ export default {
     }
     .left_nav {
       padding-top: 0.426667rem /* 40/93.75 */;
+    }
+  }
+}
+.credit-list {
+  position: relative;
+  .credit-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // min-height: 250px;
+    p {
+      font-size: 0.170667rem /* 16/93.75 */;
+      margin-bottom: 0.106667rem; /* 10/93.75 */
     }
   }
 }

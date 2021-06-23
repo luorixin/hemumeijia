@@ -33,10 +33,10 @@
     <div class="index_contact">
       <h2 class="left_h">联系我们</h2>
       <p>联系人：王先生</p>
-      <p>手机：18781980404</p>
-      <p>电话：18781980404</p>
-      <p>邮箱：1042912994@qq.com</p>
-      <p>地址：彭州市经济开发区独柏路566号</p>
+      <p>手机：18328550119</p>
+      <p>电话：028-84456078</p>
+      <p>邮箱：851836418@qq.com</p>
+      <p>地址：成都市新都区蓉都大道北三段禾木美家全屋定制</p>
     </div>
   </div>
 </template>
@@ -96,7 +96,7 @@ export default {
         },
         {
           href: '/product/study',
-          label: '书房'
+          label: '榻榻米'
         }
       ]
     }
@@ -164,11 +164,13 @@ export default {
   text-decoration: none;
   font-size: 0.192rem /* 18/93.75 */;
   color: #656464;
+  width: 100%;
+  display: inline-block;
 }
 
 .left_nav_ul > li.active > a {
   font-weight: bold;
-  color: #479578;
+  color: #182923;
 }
 
 .index_contact {

@@ -1,6 +1,16 @@
 /* 改变 icon 字体路径变量，必需 */
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
+$--size-base: 0.149333rem
+/* 14/93.75 */
+;
+
+/* Header
+  --------------------------*/
+$--header-padding: 0 0.213333rem
+/* 20/93.75 */
+;
+
 $--color-primary:#E66041;
 
 @import "~element-ui/packages/theme-chalk/src/index";

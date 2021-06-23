@@ -8,6 +8,9 @@ import {
   Submenu,
   MenuItem,
   MenuItemGroup,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
   Input,
   InputNumber,
   Button,
@@ -29,12 +32,20 @@ import {
   MessageBox,
   Notification
 } from 'element-ui'
+import 'element-ui/lib/theme-chalk/base.css'
+// collapse 展开折叠
+import CollapseTransition from 'element-ui/lib/transitions/collapse-transition'
 import locale from 'element-ui/lib/locale/lang/en'
 import './element-variable.scss'
+
+Vue.component(CollapseTransition.name, CollapseTransition)
 
 Vue.use(Dialog, { locale })
 Vue.use(Menu, { locale })
 Vue.use(Submenu, { locale })
+Vue.use(Dropdown, { locale })
+Vue.use(DropdownMenu, { locale })
+Vue.use(DropdownItem, { locale })
 Vue.use(MenuItem, { locale })
 Vue.use(MenuItemGroup, { locale })
 Vue.use(Row, { locale })

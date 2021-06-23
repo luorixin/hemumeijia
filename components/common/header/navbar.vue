@@ -15,7 +15,7 @@
         <el-menu-item index="product/livingRoom">客厅</el-menu-item>
         <el-menu-item index="product/kitchen">厨房</el-menu-item>
         <el-menu-item index="product/bedroom">卧室</el-menu-item>
-        <el-menu-item index="product/study">书房</el-menu-item>
+        <el-menu-item index="product/study">榻榻米</el-menu-item>
       </el-submenu>
       <el-menu-item index="feature">产品优势</el-menu-item>
       <el-menu-item index="culture">企业文化</el-menu-item>
@@ -37,8 +37,9 @@ export default {
   },
   methods: {
     handleSelect(key, keyPath) {
+      const prefix = key === '/' ? '' : '/'
       this.$router.replace({
-        path: '/' + key
+        path: prefix + key
       })
     }
   }
