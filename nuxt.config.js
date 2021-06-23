@@ -43,7 +43,11 @@ export default {
   plugins: [
     '@/plugins/element-ui/element-ui',
     '@/plugins/filter',
-    '@/plugins/i18n'
+    '@/plugins/i18n',
+    {
+      src: '@/plugins/tongji',
+      ssr: false
+    }
     // { src: '@/plugins/wow', ssr: false }
   ],
 
