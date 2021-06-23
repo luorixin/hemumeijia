@@ -10,8 +10,14 @@
         </div>
         <div class="head-carousel">
           <el-carousel :interval="5000" arrow="always" height="4.309333rem">
-            <el-carousel-item v-for="(item, index) in headImgs" :key="'head_img_' + index">
-              <img style="height: 100%; object-fit: cover; object-position: left" :src="item.src" />
+            <el-carousel-item
+              v-for="(item, index) in headImgs"
+              :key="'head_img_' + index"
+            >
+              <img
+                style="height: 100%; object-fit: cover; object-position: left"
+                :src="item.src"
+              />
             </el-carousel-item>
           </el-carousel>
         </div>
@@ -38,7 +44,7 @@
               :xl="6"
             >
               <div class="product-item">
-                <el-image lazy :src="item.img" :alt="item.name" fit="contain">
+                <el-image :src="item.img" :alt="item.name" fit="contain">
                   <div slot="placeholder" class="image-slot">
                     加载中
                     <span class="dot">...</span>
@@ -54,7 +60,14 @@
     <section class="home-process">
       <div class="container">
         <el-row class="process-content">
-          <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" class="process-head">
+          <el-col
+            :xs="24"
+            :sm="24"
+            :md="8"
+            :lg="8"
+            :xl="8"
+            class="process-head"
+          >
             <h2>家具轻松定制</h2>
             <p>CUSTOMIZATION PROCESS</p>
           </el-col>
@@ -103,7 +116,14 @@
           </div>
         </div>
         <el-row :gutter="30">
-          <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" style="text-align: center">
+          <el-col
+            :xs="24"
+            :sm="24"
+            :md="12"
+            :lg="12"
+            :xl="12"
+            style="text-align: center"
+          >
             <div class="about-img">
               <el-image :src="featureImg.src" fit="contain"></el-image>
             </div>
@@ -157,7 +177,7 @@
               :xl="6"
             >
               <div class="credit-item">
-                <el-image lazy :src="item.img" :alt="item.name" fit="contain">
+                <el-image :src="item.img" :alt="item.name" fit="contain">
                   <div slot="placeholder" class="image-slot">
                     加载中
                     <span class="dot">...</span>
@@ -191,7 +211,7 @@
               :xl="8"
             >
               <div class="example-item">
-                <el-image lazy :src="item.img" :alt="item.name" fit="contain">
+                <el-image :src="item.img" :alt="item.name" fit="contain">
                   <div slot="placeholder" class="image-slot">
                     加载中
                     <span class="dot">...</span>
@@ -297,19 +317,19 @@ export default {
       credits: [
         {
           label: '证书',
-          img: './img/证书3.jpg'
+          img: './img/credit3.jpg'
         },
         {
           label: '证书',
-          img: './img/证书2.jpg'
+          img: './img/credit2.jpg'
         },
         {
           label: '证书',
-          img: './img/证书1.jpg'
+          img: './img/credit1.jpg'
         },
         {
           label: '证书',
-          img: './img/证书4.jpg'
+          img: './img/credit4.jpg'
         }
       ]
     }

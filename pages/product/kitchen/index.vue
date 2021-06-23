@@ -27,12 +27,7 @@
                   :xl="6"
                 >
                   <div class="product-item">
-                    <el-image
-                      lazy
-                      :src="item.img"
-                      :alt="item.name"
-                      fit="contain"
-                    >
+                    <el-image :src="item.img" :alt="item.name" fit="contain">
                       <div slot="placeholder" class="image-slot">
                         加载中
                         <span class="dot">...</span>

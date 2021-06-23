@@ -5,14 +5,7 @@
     </div>
     <div class="about-con container">
       <el-row :gutter="30">
-        <el-col
-          :xs="24"
-          :sm="24"
-          :md="16"
-          :lg="18"
-          :xl="18"
-          style="float: right"
-        >
+        <el-col :xs="24" :sm="24" :md="16" :lg="18" :xl="18" style="float: right">
           <div class="about-box">
             <h2 class="left_h">关于我们</h2>
             <div class="contents">
@@ -22,27 +15,6 @@
                 creator of the comfortable
                 room(惬意空间的创造者)为己任，致力于用
                 原创设计，为千千万万消费者家庭定制舒适、环 保、便捷的定制家具。
-              </p>
-              <br />
-              <p>
-                &nbsp; &nbsp;成都禾木美家定制家具有限公司
-                是一家专业生产整体衣柜、衣帽 间、书柜、酒柜等多种系列的家
-                居制品公司，同时也是集设计、 销售、服务于一体的一家综合性
-                家居服务公司。
-              </p>
-              <br />
-              <p>
-                &nbsp; &nbsp; 公司自创建以来，始终坚持“精益求精”
-                的经营理念，与“以客户为中心”的服
-                务宗旨。持续为客户提供满意的产品和
-                信赖的服务;引进国内外先进柔性生产线，
-                产品制造自动化，、信息化、精细化三
-                管齐下，确保产品从设计、开料、封边、
-                表面处理、包装、运输、安装到服务的
-                每一个环节都做到更好，保证高品质的
-                产品交付到每一个客户的手中，以“智
-                能产品，智慧工厂”为目标，专注于为
-                高端用户提供更优质的定制家具为使命， 领跑全屋定制家居企业。
               </p>
               <br />
               <p>
@@ -74,12 +46,7 @@
                     :xl="6"
                   >
                     <div class="credit-item">
-                      <el-image
-                        lazy
-                        :src="item.img"
-                        :alt="item.name"
-                        fit="contain"
-                      >
+                      <el-image lazy :src="item.img" :alt="item.name" fit="contain">
                         <div slot="placeholder" class="image-slot">
                           加载中
                           <span class="dot">...</span>
@@ -117,19 +84,19 @@ export default {
       credits: [
         {
           label: '证书',
-          img: './img/证书3.jpg'
+          img: './img/credit3.jpg'
         },
         {
           label: '证书',
-          img: './img/证书2.jpg'
+          img: './img/credit2.jpg'
         },
         {
           label: '证书',
-          img: './img/证书1.jpg'
+          img: './img/credit1.jpg'
         },
         {
           label: '证书',
-          img: './img/证书4.jpg'
+          img: './img/credit4.jpg'
         }
       ]
     }
