@@ -1,15 +1,30 @@
+import sitemap from './config/sitemap'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'hemumeijia',
+    title: '禾木美家_官网_家居定制_成都家具定制_hemumeijia',
     htmlAttrs: {
       lang: 'zh-CN'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '禾木美家' },
-      { name: 'referrer', content: 'no-referrer' } // 解决 网络图片 img 403问题
+      {
+        itemprop: 'name',
+        content: '禾木美家_官网_家居定制_成都家具定制_hemumeijia'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          '成都禾木美家定制家具有限公司是一家专业生产整体衣柜、衣帽 间、书柜、酒柜等多种系列的家居制品公司，同时也是集设计、 销售、服务于一体的一家综合性家居服务公司。'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: '禾木美家,家居定制,成都家居,hemumeijia,hemu'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: './favicon.ico' }],
     script: [{ src: './rem.js', type: 'text/javascript', charset: 'utf-8' }]
@@ -39,7 +54,15 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/robots', '@nuxtjs/sitemap', '@nuxtjs/axios'],
+
+  robots: {
+    UserAgent: '*',
+    Allow: '*',
+    Sitemap: 'http://hemumeijia.com/sitemap.xml'
+  },
+
+  sitemap: sitemap,
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
