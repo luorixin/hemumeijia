@@ -60,6 +60,10 @@ html * {
     /* 20/93.75 */
   ;
 }
+.about-bg .el-image {
+  width: 100%;
+  min-height: 1px;
+}
 
 @media(max-width: 769px) {
   html {

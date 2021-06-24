@@ -1,7 +1,7 @@
 <template>
   <div class="about-body">
     <div class="about-bg">
-      <img style="object-fit: cover" :src="aboutBg" />
+      <el-image lazy :src="aboutBg" fit="cover"></el-image>
     </div>
     <div class="about-con container">
       <el-row :gutter="30">
