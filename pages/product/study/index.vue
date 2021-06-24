@@ -27,7 +27,12 @@
                   :xl="6"
                 >
                   <div class="product-item">
-                    <el-image :src="item.img" :alt="item.name" fit="contain">
+                    <el-image
+                      :preview-src-list="products.map(item => item.img)"
+                      :src="item.img"
+                      :alt="item.name"
+                      fit="contain"
+                    >
                       <div slot="placeholder" class="image-slot">
                         加载中
                         <span class="dot">...</span>
@@ -60,39 +65,39 @@ export default {
   },
   data() {
     return {
-      aboutBg: './img/aboutBg.jpg',
+      aboutBg: '/img/aboutBg.jpg',
       products: [
         {
           label: '榻榻米混搭',
-          img: './img/tatami1.png'
+          img: '/img/tatami1.png'
         },
         {
           label: '榻榻米混搭',
-          img: './img/tatami2.png'
+          img: '/img/tatami2.png'
         },
         {
           label: '榻榻米混搭',
-          img: './img/tatami3.png'
+          img: '/img/tatami3.png'
         },
         {
           label: '榻榻米混搭',
-          img: './img/tatami4.png'
+          img: '/img/tatami4.png'
         },
         {
           label: '榻榻米混搭',
-          img: './img/tatami3.png'
+          img: '/img/tatami3.png'
         },
         {
           label: '榻榻米混搭',
-          img: './img/tatami1.png'
+          img: '/img/tatami1.png'
         },
         {
           label: '榻榻米混搭',
-          img: './img/tatami4.png'
+          img: '/img/tatami4.png'
         },
         {
           label: '榻榻米混搭',
-          img: './img/tatami2.png'
+          img: '/img/tatami2.png'
         }
       ]
     }

@@ -2,8 +2,10 @@
   <div class="m-footer">
     <div class="footer-con">
       <p>
-        CopyRight 2020 All Right Reserved 成都禾木美家定制家具有限公司
-        四川全屋定制家居
+        Copyright © 成都禾木美家定制家具有限公司 2021
+        <a style="color: #fff" href="https://beian.miit.gov.cn" target="_blank"
+          >蜀ICP备2021015213号-1</a
+        >
       </p>
       <p>
         地址：成都市新都区蓉都大道北三段禾木美家全屋定制 电话：18328550119

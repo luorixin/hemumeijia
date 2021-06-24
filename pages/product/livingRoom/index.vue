@@ -27,7 +27,12 @@
                   :xl="6"
                 >
                   <div class="product-item">
-                    <el-image :src="item.img" :alt="item.name" fit="contain">
+                    <el-image
+                      :preview-src-list="products.map(item => item.img)"
+                      :src="item.img"
+                      :alt="item.name"
+                      fit="contain"
+                    >
                       <div slot="placeholder" class="image-slot">
                         加载中
                         <span class="dot">...</span>
@@ -60,39 +65,39 @@ export default {
   },
   data() {
     return {
-      aboutBg: './img/aboutBg.jpg',
+      aboutBg: '/img/aboutBg.jpg',
       products: [
         {
           label: '新中式客厅',
-          img: './img/keting1.png'
+          img: '/img/keting1.png'
         },
         {
           label: '新中式客厅',
-          img: './img/keting2.png'
+          img: '/img/keting2.png'
         },
         {
           label: '欧式客厅',
-          img: './img/keting3.png'
+          img: '/img/keting3.png'
         },
         {
           label: '美式客厅',
-          img: './img/keting4.png'
+          img: '/img/keting4.png'
         },
         {
           label: '美式客厅',
-          img: './img/keting5.png'
+          img: '/img/keting5.png'
         },
         {
           label: '美式客厅',
-          img: './img/keting6.png'
+          img: '/img/keting6.png'
         },
         {
           label: '现代风格客厅',
-          img: './img/keting7.png'
+          img: '/img/keting7.png'
         },
         {
           label: '现代风格客厅',
-          img: './img/keting8.png'
+          img: '/img/keting8.png'
         }
       ]
     }

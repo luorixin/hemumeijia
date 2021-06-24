@@ -15,7 +15,8 @@
               :key="'head_img_' + index"
             >
               <img
-                style="height: 100%; object-fit: cover; object-position: left"
+                style="height: 100%; object-fit: cover; object-position: center"
+                :style="index === 1 ? 'width: 100%;height:auto' : ''"
                 :src="item.src"
               />
             </el-carousel-item>
@@ -44,7 +45,12 @@
               :xl="6"
             >
               <div class="product-item">
-                <el-image :src="item.img" :alt="item.name" fit="contain">
+                <el-image
+                  :preview-src-list="products.map(item => item.img)"
+                  :src="item.img"
+                  :alt="item.name"
+                  fit="contain"
+                >
                   <div slot="placeholder" class="image-slot">
                     加载中
                     <span class="dot">...</span>
@@ -211,7 +217,13 @@
               :xl="8"
             >
               <div class="example-item">
-                <el-image :src="item.img" :alt="item.name" fit="contain">
+                <el-image
+                  :preview-src-list="examples.map(item => item.img)"
+                  :src="item.img"
+                  :alt="item.name"
+                  lazy
+                  fit="contain"
+                >
                   <div slot="placeholder" class="image-slot">
                     加载中
                     <span class="dot">...</span>

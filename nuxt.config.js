@@ -26,8 +26,8 @@ export default {
         content: '禾木美家,家居定制,成都家居,hemumeijia,hemu'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: './favicon.ico' }],
-    script: [{ src: './rem.js', type: 'text/javascript', charset: 'utf-8' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [{ src: '/rem.js', type: 'text/javascript', charset: 'utf-8' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -62,7 +62,7 @@ export default {
 
   robots: {
     UserAgent: '*',
-    Allow: '*',
+    Allow: '/',
     Sitemap: 'http://hemumeijia.com/sitemap.xml'
   },
 
@@ -100,8 +100,9 @@ export default {
     }
   },
   router: {
-    mode: process.env.NODE_ENV === 'production' ? 'hash' : 'history',
-    base: process.env.NODE_ENV === 'production' ? './' : '/',
+    // mode: process.env.NODE_ENV === 'production' ? 'hash' : 'history',
+    // base: process.env.NODE_ENV === 'production' ? './' : '/',
+    mode: 'history',
     scrollBehavior(to, from, savedPosition) {
       if (savedPosition) {
         return savedPosition
@@ -127,5 +128,8 @@ export default {
     '/public/': {
       target: 'http://127.0.0.1:8999/'
     }
+  },
+  generate: {
+    dir: 'hemumeijia'
   }
 }

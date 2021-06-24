@@ -89,6 +89,10 @@ html * {
     display: block;
   }
 
+  .about-bg img{
+    display: none;
+  }
+
   .head-text {
     display: none;
   }

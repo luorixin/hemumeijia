@@ -27,7 +27,12 @@
                   :xl="6"
                 >
                   <div class="product-item">
-                    <el-image :src="item.img" :alt="item.name" fit="contain">
+                    <el-image
+                      :preview-src-list="products.map(item => item.img)"
+                      :src="item.img"
+                      :alt="item.name"
+                      fit="contain"
+                    >
                       <div slot="placeholder" class="image-slot">
                         加载中
                         <span class="dot">...</span>
@@ -60,55 +65,55 @@ export default {
   },
   data() {
     return {
-      aboutBg: './img/aboutBg.jpg',
+      aboutBg: '/img/aboutBg.jpg',
       products: [
         {
           label: '新中式卧室',
-          img: './img/woshi1.png'
+          img: '/img/woshi1.png'
         },
         {
           label: '新中式卧室',
-          img: './img/woshi2.png'
+          img: '/img/woshi2.png'
         },
         {
           label: '欧式卧室',
-          img: './img/woshi3.png'
+          img: '/img/woshi3.png'
         },
         {
           label: '欧式卧室',
-          img: './img/woshi4.png'
+          img: '/img/woshi4.png'
         },
         {
           label: '美式卧室',
-          img: './img/woshi5.png'
+          img: '/img/woshi5.png'
         },
         {
           label: '美式卧室',
-          img: './img/woshi6.png'
+          img: '/img/woshi6.png'
         },
         {
           label: '美式卧室',
-          img: './img/woshi7.png'
+          img: '/img/woshi7.png'
         },
         {
           label: '美式卧室',
-          img: './img/woshi8.png'
+          img: '/img/woshi8.png'
         },
         {
           label: '现代风格卧室',
-          img: './img/woshi9.png'
+          img: '/img/woshi9.png'
         },
         {
           label: '现代风格卧室',
-          img: './img/woshi10.png'
+          img: '/img/woshi10.png'
         },
         {
           label: '现代风格卧室',
-          img: './img/woshi11.png'
+          img: '/img/woshi11.png'
         },
         {
           label: '现代风格卧室',
-          img: './img/woshi12.png'
+          img: '/img/woshi12.png'
         }
       ]
     }
