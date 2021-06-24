@@ -80,7 +80,7 @@
           <el-col :xs="12" :sm="12" :md="4" :lg="4" :xl="4" class="process-col">
             <el-image
               fit="contain"
-              src="http://www.syddzjj.com/skin/picture/58dccd9f04f1a_1.png"
+              :src="toolImgs.zixun"
               alt="咨询预约"
             ></el-image>
             <h4>咨询预约</h4>
@@ -88,7 +88,7 @@
           <el-col :xs="12" :sm="12" :md="4" :lg="4" :xl="4" class="process-col">
             <el-image
               fit="contain"
-              src="http://www.syddzjj.com/skin/picture/58dcce28f17d5_1.png"
+              :src="toolImgs.liangchi"
               alt="上门量尺"
             ></el-image>
             <h4>上门量尺</h4>
@@ -96,7 +96,7 @@
           <el-col :xs="12" :sm="12" :md="4" :lg="4" :xl="4" class="process-col">
             <el-image
               fit="contain"
-              src="http://www.syddzjj.com/skin/picture/58dcce4f97f0f_1.png"
+              :src="toolImgs.baojia"
               alt="工程报价"
             ></el-image>
             <h4>工程报价</h4>
@@ -104,7 +104,7 @@
           <el-col :xs="12" :sm="12" :md="4" :lg="4" :xl="4" class="process-col">
             <el-image
               fit="contain"
-              src="http://www.syddzjj.com/skin/picture/58dcce794024d_1.png"
+              :src="toolImgs.shengchan"
               alt="批量生产"
             ></el-image>
             <h4>批量生产</h4>
@@ -131,7 +131,7 @@
             style="text-align: center"
           >
             <div class="about-img">
-              <el-image :src="featureImg.src" fit="contain"></el-image>
+              <el-image lazy :src="featureImg.src" fit="contain"></el-image>
             </div>
           </el-col>
           <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
@@ -183,7 +183,7 @@
               :xl="6"
             >
               <div class="credit-item">
-                <el-image :src="item.img" :alt="item.name" fit="contain">
+                <el-image lazy :src="item.img" :alt="item.name" fit="contain">
                   <div slot="placeholder" class="image-slot">
                     加载中
                     <span class="dot">...</span>
@@ -257,6 +257,12 @@ export default {
       ],
       featureImg: {
         src: './img/headDesc.png'
+      },
+      toolImgs: {
+        zixun: './img/zixun.png',
+        liangchi: './img/liangchi.png',
+        baojia: './img/baojia.png',
+        shengchan: './img/shengchan.png'
       },
       products: [
         {
