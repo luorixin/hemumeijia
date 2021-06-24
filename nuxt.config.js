@@ -1,4 +1,5 @@
 import sitemap from './config/sitemap'
+const resolve = require('path').resolve
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -109,7 +110,14 @@ export default {
       }
       return { x: 0, y: 0 }
     },
-    middleware: 'i18n'
+    middleware: 'i18n',
+    extendRoutes(routes) {
+      routes.push({
+        name: 'custom',
+        path: '*',
+        redirect: '/'
+      })
+    }
   },
   server: {
     port: 5000

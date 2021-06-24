@@ -70,7 +70,7 @@ export default {
   },
   data() {
     return {
-      aboutBg: './img/aboutBg.jpg'
+      aboutBg: '/img/aboutBg.jpg'
     }
   }
 }

@@ -249,105 +249,105 @@ export default {
     return {
       headImgs: [
         {
-          src: './img/head1.jpg'
+          src: '/img/head1.jpg'
         },
         {
-          src: './img/head2.jpg'
+          src: '/img/head2.jpg'
         }
       ],
       featureImg: {
-        src: './img/headDesc.png'
+        src: '/img/headDesc.png'
       },
       toolImgs: {
-        zixun: './img/zixun.png',
-        liangchi: './img/liangchi.png',
-        baojia: './img/baojia.png',
-        shengchan: './img/shengchan.png'
+        zixun: '/img/zixun.png',
+        liangchi: '/img/liangchi.png',
+        baojia: '/img/baojia.png',
+        shengchan: '/img/shengchan.png'
       },
       products: [
         {
           label: '新中式客厅',
-          img: './img/keting1.png'
+          img: '/img/keting1.png'
         },
         {
           label: '新中式卧室',
-          img: './img/woshi1.png'
+          img: '/img/woshi1.png'
         },
         {
           label: '欧式客厅',
-          img: './img/keting2.png'
+          img: '/img/keting2.png'
         },
         {
           label: '欧式卧室',
-          img: './img/woshi2.png'
+          img: '/img/woshi2.png'
         },
         {
           label: '厨房混搭',
-          img: './img/chufang1.png'
+          img: '/img/chufang1.png'
         },
         {
           label: '厨房混搭',
-          img: './img/chufang2.png'
+          img: '/img/chufang2.png'
         },
         {
           label: '榻榻米混搭',
-          img: './img/tatami1.png'
+          img: '/img/tatami1.png'
         },
         {
           label: '榻榻米混搭',
-          img: './img/tatami3.png'
+          img: '/img/tatami3.png'
         }
         // {
         //   label: '厨房混搭',
-        //   img: './img/chufang1.png'
+        //   img: '/img/chufang1.png'
         // },
         // {
         //   label: '榻榻米混搭',
-        //   img: './img/tatami1.png'
+        //   img: '/img/tatami1.png'
         // }
       ],
       examples: [
         {
           label: '现代风格客厅',
-          img: './img/keting9.png'
+          img: '/img/keting9.png'
         },
         {
           label: '新中式卧室',
-          img: './img/woshi1.png'
+          img: '/img/woshi1.png'
         },
         {
           label: '欧式客厅',
-          img: './img/keting2.png'
+          img: '/img/keting2.png'
         },
         {
           label: '榻榻米混搭',
-          img: './img/tatami2.png'
+          img: '/img/tatami2.png'
         },
         {
           label: '欧式客厅',
-          img: './img/keting2.png'
+          img: '/img/keting2.png'
         },
         {
           label: '美式客厅',
-          img: './img/keting5.png'
+          img: '/img/keting5.png'
         }
       ],
       credits: [
         {
           label: '证书',
-          img: './img/credit3.jpg'
+          img: '/img/credit3.jpg'
         },
         {
           label: '证书',
-          img: './img/credit2.jpg'
+          img: '/img/credit2.jpg'
         },
         {
           label: '证书',
-          img: './img/credit1.jpg'
+          img: '/img/credit1.jpg'
         },
         {
           label: '证书',
-          img: './img/credit4.jpg'
+          img: '/img/credit4.jpg'
         }
       ]
     }

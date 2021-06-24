@@ -5,7 +5,14 @@
     </div>
     <div class="about-con container">
       <el-row :gutter="30">
-        <el-col :xs="24" :sm="24" :md="16" :lg="18" :xl="18" style="float: right">
+        <el-col
+          :xs="24"
+          :sm="24"
+          :md="16"
+          :lg="18"
+          :xl="18"
+          style="float: right"
+        >
           <div class="about-box">
             <h2 class="left_h">关于我们</h2>
             <div class="contents">
@@ -46,7 +53,12 @@
                     :xl="6"
                   >
                     <div class="credit-item">
-                      <el-image lazy :src="item.img" :alt="item.name" fit="contain">
+                      <el-image
+                        lazy
+                        :src="item.img"
+                        :alt="item.name"
+                        fit="contain"
+                      >
                         <div slot="placeholder" class="image-slot">
                           加载中
                           <span class="dot">...</span>
@@ -80,23 +92,23 @@ export default {
   },
   data() {
     return {
-      aboutBg: './img/aboutBg.jpg',
+      aboutBg: '/img/aboutBg.jpg',
       credits: [
         {
           label: '证书',
-          img: './img/credit3.jpg'
+          img: '/img/credit3.jpg'
         },
         {
           label: '证书',
-          img: './img/credit2.jpg'
+          img: '/img/credit2.jpg'
         },
         {
           label: '证书',
-          img: './img/credit1.jpg'
+          img: '/img/credit1.jpg'
         },
         {
           label: '证书',
-          img: './img/credit4.jpg'
+          img: '/img/credit4.jpg'
         }
       ]
     }
